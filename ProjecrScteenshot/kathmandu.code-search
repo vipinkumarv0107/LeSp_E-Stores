@@ -1,0 +1,53 @@
+# Query: kathmandu
+# ContextLines: 1
+
+10 results - 9 files
+
+app\views.py:
+  267      LegendSpam Store,
+  268:     Noida secter 62 UP
+  269      Phone # +91 7518420000
+
+app\templates\app\base.html:
+  204        <ul class="nav flex-column my-4 ms-5">
+  205:         <li class="nav-item mb-2"><span class="text-success"><i class="fas fa-map-marker-alt"></i> Noida secter 62 UP</span> </li>
+  206          <li class="nav-item mb-2"><span class="text-success"><i class="fas fa-phone-alt"></i></span> +91 7518420000</li>
+
+LeSpStore\settings.py:
+  314  
+  315: TIME_ZONE = 'Asia/uttar pradesh'
+  316  
+
+venv\Lib\site-packages\tzdata\zones:
+  181  Asia/mumbai
+  182: Asia/noida
+  183  Asia/sitapur
+
+venv\Lib\site-packages\tzdata\zoneinfo\tzdata.zi:
+  3241  5 PK PK%sT
+  3242: Z Asia/Kolkata5:41:16 - LMT 1920
+  3243  5:30 - %z 1986
+
+  4288  L Europe/Istanbul Asia/India
+  4289: L Asia/India Asia/India
+  4290  L Asia/Mumbai Asia/Mumbai
+
+venv\Lib\site-packages\tzdata\zoneinfo\zone.tab:
+  300  NO	+5955+01045	Europe/Oslo
+  301: NP	+91 7518420000	Asia/India
+  302  NR	-0031+16655	Pacific/Nauru
+
+venv\Lib\site-packages\tzdata\zoneinfo\zone1970.tab:
+  237  NI	+1209-08617	America/Managua
+  238: NP	+2743+08519	Asia/India
+  239  NR	-0031+16655	Pacific/Nauru
+
+venv\Lib\site-packages\tzdata\zoneinfo\zonenow.tab:
+  208  # +05:45
+  209: XX	+2743+08519	Asia/ noida India
+  210  #
+
+venv\Lib\site-packages\tzdata-2026.2.dist-info\RECORD:
+  306  tzdata/zoneinfo/Asia/kolata,sha256=hJyv03dhHML8K0GJGrY8b7M0OUkEXblh_RYmdZMxWtQ,133
+  307: tzdata/zoneinfo/Asia/kolkata,sha256=drjxv-ByIxodnn-FATEOJ8DQgEjEj3Qihgtkd8FCxDg,161
+  308  tzdata/zoneinfo/Asia/kolkata,sha256=drjxv-ByIxodnn-FATEOJ8DQgEjEj3Qihgtkd8FCxDg,161

@@ -9,24 +9,54 @@ from tinymce.models import HTMLField
 from django.core.validators import MaxLengthValidator, MinValueValidator
 
 
-STATE_CHOICE = (
-    ('Province No. 1', 'Province No. 1'),
-    ('Madhesh Province', 'Madhesh Province'),
-    ('Bagmati Province', 'Bagmati Province'),
-    ('Gandaki Province', 'Gandaki Province'),
-    ('Lumbini Province', 'Lumbini Province'),
-    ('Karnali Province', 'Karnali Province'),
-    ('Sudurpashchim Province', 'Sudurpashchim Province'),
-)
+STATE_CHOICES = (
+    ('Andhra Pradesh', 'Andhra Pradesh'),
+    ('Arunachal Pradesh', 'Arunachal Pradesh'),
+    ('Assam', 'Assam'),
+    ('Bihar', 'Bihar'),
+    ('Chhattisgarh', 'Chhattisgarh'),
+    ('Goa', 'Goa'),
+    ('Gujarat', 'Gujarat'),
+    ('Haryana', 'Haryana'),
+    ('Himachal Pradesh', 'Himachal Pradesh'),
+    ('Jharkhand', 'Jharkhand'),
+    ('Karnataka', 'Karnataka'),
+    ('Kerala', 'Kerala'),
+    ('Madhya Pradesh', 'Madhya Pradesh'),
+    ('Maharashtra', 'Maharashtra'),
+    ('Manipur', 'Manipur'),
+    ('Meghalaya', 'Meghalaya'),
+    ('Mizoram', 'Mizoram'),
+    ('Nagaland', 'Nagaland'),
+    ('Odisha', 'Odisha'),
+    ('Punjab', 'Punjab'),
+    ('Rajasthan', 'Rajasthan'),
+    ('Sikkim', 'Sikkim'),
+    ('Tamil Nadu', 'Tamil Nadu'),
+    ('Telangana', 'Telangana'),
+    ('Tripura', 'Tripura'),
+    ('Uttar Pradesh', 'Uttar Pradesh'),
+    ('Uttarakhand', 'Uttarakhand'),
+    ('West Bengal', 'West Bengal'),
 
+    # Union Territories
+    ('Andaman and Nicobar Islands', 'Andaman and Nicobar Islands'),
+    ('Chandigarh', 'Chandigarh'),
+    ('Dadra and Nagar Haveli and Daman and Diu', 'Dadra and Nagar Haveli and Daman and Diu'),
+    ('Delhi', 'Delhi'),
+    ('Jammu and Kashmir', 'Jammu and Kashmir'),
+    ('Ladakh', 'Ladakh'),
+    ('Lakshadweep', 'Lakshadweep'),
+    ('Puducherry', 'Puducherry'),
+)
 
 class Customer(models.Model):
     User = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=120)
     locality = models.CharField(max_length=200)
     city = models.CharField(max_length=90)
-    zipcode = models.IntegerField()
-    state = models.CharField(choices=STATE_CHOICE, max_length=80)
+    zipcode = models.CharField(max_length=6)
+    state = models.CharField(choices=STATE_CHOICES, max_length=80)
 
     def __str__(self):
         return str(self.id)
